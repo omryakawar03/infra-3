@@ -22,7 +22,7 @@ module "s3" {
 output "rds_endpoint" {
   description = "The connection endpoint for the RDS instance"
   # Replace 'this' with the actual name of your resource in the module
-  value       = aws_db_instance.cbz_db_instance.endpoint 
+  value       = module.rds.rds_endpoint
 }
 output "aws_s3_website_endpoint" {
     value = module.s3.website_endpoint
