@@ -66,4 +66,5 @@ resource "aws_db_subnet_group" "default" {
 
   output "aws_db_instance_endpoint" {
     value = aws_db_instance.cbz_db_instance.endpoint
+
   }

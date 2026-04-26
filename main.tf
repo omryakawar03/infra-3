@@ -19,6 +19,9 @@ module "s3" {
     source = "./modules/s3"
     s3_bucket_name = "frontend-bucket-flight-app123"
 }
+ output "aws_db_instance_endpoint" {
+    value = aws_db_instance.cbz_db_instance.endpoint
+  }
 
 output "aws_s3_website_endpoint" {
     value = module.s3.website_endpoint
